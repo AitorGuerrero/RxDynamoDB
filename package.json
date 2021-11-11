@@ -1,0 +1,32 @@
+{
+  "name": "rx-dynamodb",
+  "version": "0.0.0",
+  "description": "DynamoDB helper using rxjs library for reactive programming",
+  "main": "src/rx-document-client.class.js",
+  "repository": "git@github.com:AitorGuerrero/RxDynamoDB.git",
+  "author": "Aitor Guerrero <aitgud.dev@gmail.com>",
+  "license": "UNLICENSED",
+  "private": false,
+  "scripts": {
+    "build": "tsc --build tsconfig.publish.json",
+    "build:clean": "tsc --build --clean tsconfig.publish.json",
+    "build:check": "tsc",
+    "style:check": "eslint .",
+    "style:fix": "eslint . --fix",
+    "preversion": "yarn build",
+    "postversion": "yarn build:clean",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "aws-sdk": "^2.1025.0",
+    "eslint": "^8.2.0",
+    "husky": "^7.0.4",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "dynamo-iterator": "^3.2.0",
+    "rxjs": "^7.4.0"
+  }
+}
